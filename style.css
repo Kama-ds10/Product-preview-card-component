@@ -8,4 +8,137 @@
   padding: 0;
 }
 
+body {
+  font-weight: 500;
+  background: hsl(30, 38%, 92%);
+  color: hsl(228, 12%, 48%);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.mobile {
+  display: none;
+}
 /* main layout */
+.main-container {
+  display: flex;
+  align-items: center;
+  height: 100dvh;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  width: 38em;
+  background: hsl(0, 0%, 100%);
+  border-radius: 0.8rem;
+}
+
+.card-container > * {
+  flex-basis: 100%;
+}
+
+.Product-img {
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+}
+
+/* colume section left */
+.card-description {
+  padding: 2rem;
+}
+
+.card-description * + * {
+  margin-top: 1rem;
+}
+
+.amount-num {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* text content */
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 4px;
+}
+
+.sub-title,
+.price-amount {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.sub-title {
+  color: hsl(212, 21%, 14%);
+  font-size: 34px;
+}
+
+.price-amount {
+  color: hsl(158, 36%, 37%);
+}
+
+.previous-amount {
+  text-decoration: line-through;
+  margin: 0 !important;
+}
+
+/* button */
+.buy-btn {
+  border: none;
+  display: flex;
+  padding: 0.9rem;
+  align-items: center;
+  background: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.attribution {
+  font-size: 24px;
+  text-align: center;
+  /* margin-top: 20px; */
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* media query */
+@media screen and (max-width: 600px) {
+  .Product-img {
+    display: none;
+    /* padding: 1rem; */
+  }
+
+  .mobile {
+    display: block;
+    border-top-left-radius: 0.6rem;
+    border-top-right-radius: 0.6rem;
+  }
+  .container {
+    padding: 2rem;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .attribution {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+}
